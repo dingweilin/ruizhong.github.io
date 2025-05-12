@@ -10,7 +10,7 @@
     "lint": "eslint src/**/*.{ts,js,vue} --fix",
     "prepare": "husky install",
     "prettier": "prettier --write .",
-     "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "ant-design-vue": "^4.2.6",
@@ -26,6 +26,7 @@
     "@types/postcss-pxtorem": "^6.1.0",
     "@vitejs/plugin-vue": "^5.2.1",
     "@vue/tsconfig": "^0.7.0",
+    "gh-pages": "^6.3.0",
     "typescript": "~5.7.2",
     "unplugin-auto-import": "^19.1.2",
     "unplugin-vue-components": "^28.4.1",
