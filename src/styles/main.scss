@@ -1,3 +1,94 @@
-// @import "tailwindcss";
-@import "./reset.scss";
-// @import "./tailwind.css";
+// 导入所有样式模块
+
+// 变量和混合宏
+@import './variables';
+@import './mixins';
+
+// 重置样式和基础样式
+@import './reset';
+@import './base';
+@import './typography';
+
+// 网格系统
+// @import './grid';
+
+// 组件样式
+@import './components';
+
+// 老年关怀模式样式
+// @import './elderly-mode';
+
+/**
+ * 全局杂项样式
+ */
+
+// 清除浮动
+.clearfix {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+// 全屏容器
+.fullscreen-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+// 辅助类
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+.mb-sm { margin-bottom: $spacing-sm; }
+.mb-md { margin-bottom: $spacing-md; }
+.mb-lg { margin-bottom: $spacing-lg; }
+
+.mt-sm { margin-top: $spacing-sm; }
+.mt-md { margin-top: $spacing-md; }
+.mt-lg { margin-top: $spacing-lg; }
+
+// 全局样式
+html, body {
+  font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+  color: $text-color;
+  background-color: $bg-color;
+  line-height: 1.5;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  
+  @include respond-to('pad') {
+    padding: 0 2rem;
+  }
+  
+  @include respond-to('pc') {
+    padding: 0 3rem;
+  }
+}
+
+// 通用动画
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+} 
+
+
