@@ -12,7 +12,7 @@ import postcsspxtorem from 'postcss-pxtorem';
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/main/',
+  // base: '/main/',
   plugins: [
     vue(),
     AutoImport({
