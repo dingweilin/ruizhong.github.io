@@ -1,0 +1,97 @@
+
+$spacing-md: 15px;
+$primary-color: #4682B4;
+$hover-bg-color: rgba(255, 255, 255, 0.15);
+$active-color: #fff;
+$active-indicator: #FFEB3B; // 使用醒目的黄色作为激活指示器
+.main-menu{
+    border-bottom: none !important;
+      background-color: transparent !important;
+      display: flex;
+      justify-content: center;
+      width: 90%;
+      line-height: 58px;
+}
+
+.custom-menu {
+    // 基础菜单样式
+    .ant-menu-item,
+    .ant-menu-submenu {
+      color: rgba(255, 255, 255, 0.9) !important;
+      font-size: 16px;
+      font-family: "思源黑体", sans-serif;
+      padding: 0 18px;
+      margin: 0 2px;
+      border-bottom: none !important;
+      color: #fff!important;
+  
+      &::after {
+        display: none !important;
+      }
+  
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background-color: rgba(255, 241, 59, 0.3);
+        transform: scaleX(0);
+        opacity: 0;
+        transition: transform 0.3s, opacity 0.3s;
+      }
+  
+      &:hover {
+        color: #fff !important;
+        background-color: $hover-bg-color !important;
+      }
+    }
+  
+    // 选中态
+    .ant-menu-item-selected,
+   .ant-menu-submenu-selected,
+    .top-menu-active {
+      color: #fff !important;
+      font-weight: 600 !important;
+      background-color: $hover-bg-color !important;
+  
+      &::before {
+        background-color: $active-indicator !important;
+        transform: scaleX(1) !important;
+        opacity: 1 !important;
+      }
+    }
+  }
+
+  
+// 确保一级菜单高亮的自定义类
+.top-menu-active {
+    color: #fff !important;
+    font-weight: 600 !important;
+    background-color: $hover-bg-color !important;
+  
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background-color: $active-indicator !important;
+      transform: scaleX(1) !important;
+      opacity: 1 !important;
+    }
+  }
+
+.custom-menu.ant-menu {
+  color: #fff !important;
+  
+  .ant-menu-item {
+    color: #fff !important;
+  }
+  
+  .ant-menu-title-content {
+    color: #fff !important;
+  }
+}
