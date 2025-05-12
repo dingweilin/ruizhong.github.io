@@ -11,7 +11,6 @@ declare module 'vue' {
     AMenu: typeof import('ant-design-vue/es')['Menu']
     BannerCarousel: typeof import('./components/common/BannerCarousel.vue')['default']
     Breadcrumb: typeof import('./components/common/Breadcrumb.vue')['default']
-    copy: typeof import('./components/common/swiper copy.vue')['default']
     Footer: typeof import('./components/layout/footer.vue')['default']
     Header: typeof import('./components/layout/header.vue')['default']
     LogoSearch: typeof import('./components/layout/logoSearch.vue')['default']
