@@ -3,7 +3,7 @@
         <div class="module_one clearfix">
             <div class="news-notice">
                 <div class="news">
-                    <sidebar :showMore="showMore" title="新闻资讯" />
+                    <sidebar :showMore="showMore" title="新闻资讯1" />
                     <div class="news-swiper-list">
                         <div class="left-swiper">
                             <banner-carousel :slides="slides2" showCaption="true" />
