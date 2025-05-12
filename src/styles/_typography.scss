@@ -1,0 +1,103 @@
+/* 排版样式 */
+
+// 标题
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: $spacing-md;
+  font-weight: 500;
+  line-height: 1.3;
+  // color: $text-color;
+}
+
+h1 {
+  font-size: $font-size-xxxl;
+  
+  @include respond-to('mobile') {
+    font-size: $font-size-xxl;
+  }
+}
+
+h2 {
+  font-size: $font-size-xxl;
+  
+  @include respond-to('mobile') {
+    font-size: $font-size-xl;
+  }
+}
+
+h3 {
+  font-size: $font-size-xl;
+  
+  @include respond-to('mobile') {
+    font-size: $font-size-lg;
+  }
+}
+
+h4 {
+  font-size: $font-size-lg;
+}
+
+h5 {
+  font-size: $font-size-base;
+}
+
+h6 {
+  font-size: $font-size-sm;
+}
+
+// 段落
+p {
+  margin-top: 0;
+  margin-bottom: $spacing-md;
+  line-height: 1.6;
+}
+
+// 小文本
+small {
+  font-size: $font-size-sm;
+}
+
+// 强调文本
+strong, b {
+  font-weight: 600;
+}
+
+// 引用
+blockquote {
+  margin: $spacing-md 0;
+  padding: $spacing-md $spacing-lg;
+  border-left: 4px solid $primary-color;
+  background-color: rgba($primary-color, 0.05);
+  font-style: italic;
+  
+  p {
+    margin-bottom: 0;
+  }
+}
+
+// 代码
+code {
+  padding: 2px 4px;
+  background-color: $bg-color-light;
+  border-radius: $border-radius-sm;
+  font-family: Consolas, Monaco, 'Andale Mono', monospace;
+  font-size: 0.9em;
+}
+
+// 列表
+ul, ol {
+  margin-top: 0;
+  // margin-bottom: $spacing-md;
+  padding-left: $spacing-lg;
+  
+  li {
+    margin-bottom: $spacing-xs;
+  }
+}
+
+// 水平线
+hr {
+  margin: $spacing-lg 0;
+  border: 0;
+  border-top: 1px solid $border-color;
+} 

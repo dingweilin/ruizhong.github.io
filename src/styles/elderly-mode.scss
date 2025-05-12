@@ -1,0 +1,297 @@
+/**
+ * 老年关怀模式全局样式
+ * 提供更大的字体、更高的对比度和简化的界面，方便老年用户使用
+ */
+
+.elderly-mode {
+  /* 全局字体大小增加 */
+  font-size: 18px !important;
+  
+  /* 增加行高，使文本更易读 */
+  line-height: 1.6 !important;
+  
+  /* 提高对比度 */
+  --primary-color: #0066cc !important;
+  --text-color: #000000 !important;
+  --background-color: #ffffff !important;
+  
+  /* 强制使用衬线字体，更易阅读 */
+  font-family: Georgia, serif !important;
+  
+  /* 全局元素样式 */
+  * {
+    transition: all 0.3s ease !important;
+  }
+  
+  /* 正文文本调整 */
+  p, li, span, div {
+    font-size: 18px !important;
+    color: #000000 !important;
+    letter-spacing: 0.5px !important;
+  }
+  
+  /* 标题文本调整 */
+  h1, h2, h3, h4, h5, h6 {
+    color: #000000 !important;
+    font-weight: bold !important;
+    margin-bottom: 16px !important;
+  }
+  
+  h1 { font-size: 32px !important; }
+  h2 { font-size: 28px !important; }
+  h3 { font-size: 24px !important; }
+  h4 { font-size: 22px !important; }
+  
+  /* 链接样式强化 */
+  a {
+    color: #0066cc !important;
+    text-decoration: underline !important;
+    font-weight: bold !important;
+    
+    &:hover {
+      text-decoration: underline !important;
+      background-color: rgba(0, 102, 204, 0.1) !important;
+    }
+    
+    /* 已访问的链接 */
+    &:visited {
+      color: #660099 !important;
+    }
+  }
+  
+  /* 导航栏链接特殊处理 */
+  .site-header .nav-list li a {
+    text-decoration: none !important;
+    font-size: 20px !important;
+    
+    &:hover, &.router-link-active {
+      color: #0066cc !important;
+      background-color: rgba(0, 102, 204, 0.1) !important;
+    }
+    
+    &.router-link-active {
+      font-weight: bold !important;
+      background-color: rgba(0, 102, 204, 0.15) !important;
+    }
+  }
+  
+  /* 按钮样式增强 */
+  button, .btn, [role="button"], input[type="button"], input[type="submit"] {
+    font-size: 18px !important;
+    padding: 12px 20px !important;
+    border-radius: 8px !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+    background-color: #0066cc !important;
+    color: white !important;
+    border: 2px solid transparent !important;
+    
+    &:hover {
+      background-color: #0055aa !important;
+      transform: translateY(-2px) !important;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3) !important;
+    }
+    
+    &:focus {
+      outline: 3px solid rgba(0, 102, 204, 0.5) !important;
+      outline-offset: 2px !important;
+    }
+  }
+  
+  /* 老年模式按钮特殊处理 */
+  .elderly-mode-toggle {
+    background-color: #e6f0fa !important;
+    border: 2px solid #0066cc !important;
+    border-radius: 8px !important;
+    padding: 10px 16px !important;
+    
+    &.active {
+      background-color: #d1e6fa !important;
+      box-shadow: 0 2px 8px rgba(0, 102, 204, 0.3) !important;
+    }
+    
+    .elderly-icon {
+      font-size: 22px !important;
+      color: #0066cc !important;
+      margin-right: 8px !important;
+    }
+    
+    .elderly-text, span {
+      color: #0066cc !important;
+      font-weight: bold !important;
+    }
+  }
+  
+  /* 输入框增强 */
+  input, textarea, select {
+    font-size: 18px !important;
+    padding: 12px !important;
+    border: 2px solid #666666 !important;
+    border-radius: 8px !important;
+    
+    &:focus {
+      border-color: #0066cc !important;
+      box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.3) !important;
+    }
+  }
+  
+  /* 导航菜单项增强 */
+  .nav-list li a {
+    font-size: 20px !important;
+    padding: 12px 16px !important;
+  }
+  
+  /* 卡片和面板增强 */
+  .card, .panel, .box, [class*="card"], [class*="panel"], [class*="box"] {
+    border: 2px solid #cccccc !important;
+    border-radius: 12px !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
+    padding: 20px !important;
+    
+    &:hover {
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15) !important;
+    }
+  }
+  
+  /* 表格增强 */
+  table {
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+    width: 100% !important;
+    
+    th, td {
+      padding: 12px 16px !important;
+      border: 1px solid #cccccc !important;
+      font-size: 18px !important;
+    }
+    
+    th {
+      background-color: #f0f0f0 !important;
+      font-weight: bold !important;
+      text-align: left !important;
+    }
+    
+    tr:nth-child(even) {
+      background-color: #f9f9f9 !important;
+    }
+    
+    tr:hover {
+      background-color: #f0f0f0 !important;
+    }
+  }
+  
+  /* 焦点元素增强 */
+  *:focus {
+    outline: 3px solid #0066cc !important;
+    outline-offset: 2px !important;
+  }
+  
+  /* 图片边框增强 */
+  img {
+    border: 1px solid #cccccc !important;
+    border-radius: 8px !important;
+  }
+  
+  /* 网站头部增强 */
+  .site-header {
+    border-bottom: 3px solid #0066cc !important;
+    background-color: #f8f8f8 !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
+    
+    .logo img {
+      filter: none !important; 
+    }
+    
+    .menu-toggle .bar {
+      height: 3px !important;
+      border-radius: 3px !important;
+      background-color: #333333 !important;
+    }
+  }
+  
+  /* 移动端菜单优化 */
+  @media (max-width: 768px) {
+    .site-header .main-nav {
+      background-color: #f8f8f8 !important;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2) !important;
+      width: 290px !important;
+      
+      .nav-list li a {
+        border-bottom: 2px solid #e0e0e0 !important;
+        padding: 16px 20px !important;
+        font-size: 20px !important;
+        
+        &:hover, &.router-link-active {
+          background-color: rgba(0, 102, 204, 0.1) !important;
+          border-bottom-color: #0066cc !important;
+        }
+      }
+    }
+  }
+  
+  /* 网站底部增强 */
+  .site-footer {
+    border-top: 3px solid #0066cc !important;
+    background-color: #f5f5f5 !important;
+    padding: 20px 0 !important;
+    color: #333333 !important;
+    
+    .footer-title {
+      color: #0066cc !important;
+      font-size: 22px !important;
+      
+      &::after {
+        background-color: #0066cc !important;
+        height: 3px !important;
+        width: 40px !important;
+      }
+    }
+    
+    .footer-links li a {
+      &::before {
+        color: #0066cc !important;
+        font-weight: bold !important;
+        font-size: 18px !important;
+      }
+      
+      &:hover {
+        transform: translateX(8px) !important;
+      }
+    }
+  }
+  
+  /* 轮播图控件增强 */
+  .carousel-indicators .indicator, 
+  .carousel-arrow {
+    transform: scale(1.5) !important;
+  }
+  
+  /* 提示和告警增强 */
+  .alert, .notification, [class*="alert"], [class*="notification"] {
+    border-width: 2px !important;
+    border-radius: 8px !important;
+    padding: 16px !important;
+    margin-bottom: 24px !important;
+    font-size: 18px !important;
+    font-weight: bold !important;
+  }
+  
+  /* 滚动条优化 */
+  ::-webkit-scrollbar {
+    width: 16px !important;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1 !important;
+    border-radius: 8px !important;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #0066cc !important;
+    border-radius: 8px !important;
+    border: 3px solid #f1f1f1 !important;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #0055aa !important;
+  }
+} 
